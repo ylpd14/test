@@ -2,13 +2,14 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>表單規格產生器（完整版）</title>
+<title>表單規格產生器</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
 
-<header>
-  <h1>📄 表單規格產生器（完整版）</h1>
+<header class="topbar">
+  <h1>📄 表單規格產生器</h1>
   <input id="formName" placeholder="請輸入表單名稱">
 </header>
 
@@ -24,7 +25,7 @@
     <button onclick="addQuestion('datetime')">日期＋時間</button>
     <button onclick="addQuestion('shift')">班別</button>
     <hr>
-    <button onclick="exportExcel()">📤 匯出直式 Excel</button>
+    <button class="export" onclick="exportExcel()">📤 匯出 Excel</button>
   </aside>
 
   <main id="canvas"></main>
@@ -35,7 +36,6 @@
   </aside>
 </div>
 
-<script src="libs/xlsx.full.min.js"></script>
 <script src="app.js"></script>
 <script src="exporter.js"></script>
 </body>
