@@ -1,0 +1,14 @@
+body{margin:0;font-family:'Noto Sans TC',Arial;background:#f4f6f8}
+header{background:#1f4fd8;color:#fff;padding:10px}
+header input{margin-left:10px;padding:5px;width:300px}
+.container{display:grid;grid-template-columns:220px 1fr 320px;height:calc(100vh - 60px)}
+.toolbox,.properties{background:#fff;padding:10px;overflow:auto}
+.toolbox button{width:100%;margin-bottom:6px}
+#canvas{padding:15px;overflow:auto}
+.question-card{background:#fff;border:1px solid #ccc;padding:10px;margin-bottom:10px;cursor:pointer}
+.question-card.active{border-color:#1f4fd8}
+.prop-group{margin-bottom:15px;border-bottom:1px solid #ddd;padding-bottom:10px}
+.prop-group h4{margin:6px 0}
+.sub{margin-left:15px}
+.rule-row{margin-bottom:6px}
+.error{color:red;font-weight:bold}
