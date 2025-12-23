@@ -2,37 +2,29 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>表單規格產生器（最終完整版）</title>
+<title>表單規格產生器 MVP</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
 
-<header class="topbar">
-  <h1>📄 表單規格產生器（最終完整版）</h1>
+<header>
+  <input id="formTitle" placeholder="請輸入表單標題" />
 </header>
 
-<div class="container">
-  <aside class="toolbox">
-    <h3>新增題目</h3>
-    <button onclick="addQuestion('short_text')">簡答</button>
-    <button onclick="addQuestion('long_text')">詳答</button>
-    <button onclick="addQuestion('radio')">選擇題</button>
-    <button onclick="addQuestion('dropdown')">下拉式</button>
-    <button onclick="addQuestion('date')">日期</button>
-    <button onclick="addQuestion('time')">時間</button>
-    <button onclick="addQuestion('datetime')">日期＋時間</button>
-    <button onclick="addQuestion('shift')">班別</button>
+<div class="layout">
+  <aside>
+    <button onclick="addField('short_text')">簡答</button>
+    <button onclick="addField('radio')">選擇題</button>
+    <button onclick="addField('date')">日期</button>
+    <button onclick="addField('shift')">班別</button>
     <hr>
-    <button class="export" onclick="exportExcel()">📤 匯出 Excel</button>
+    <button onclick="exportExcel()">匯出 Excel</button>
   </aside>
 
   <main id="canvas"></main>
 
-  <aside class="properties">
-    <h3>題目設定</h3>
-    <div id="propertyPanel">請選擇題目</div>
-  </aside>
+  <section id="props"></section>
 </div>
 
 <script src="app.js"></script>
