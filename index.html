@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-<meta charset="UTF-8">
-<title>表單規格產生器 M3</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-</head>
-<body>
-<header>
-  <input id="formTitle" placeholder="請輸入表單標題">
-  <button onclick="saveJSON()">儲存設計</button>
-  <input type="file" onchange="loadJSON(event)">
+<!DOCTYPE html><html lang='zh-TW'><head><meta charset='UTF-8'>
+<title>表單規格 Excel 產生器</title>
+<link rel='stylesheet' href='style.css'>
+<script src='https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js'></script>
+</head><body>
+<header class='top'>
+<input id='formTitle' placeholder='請輸入表單名稱'>
+<button onclick='exportExcel()'>匯出 Excel</button>
 </header>
-
-<div class="layout">
-<aside>
+<div class='layout'>
+<aside class='left'>
 <button onclick="addField('short_text')">簡答</button>
+<button onclick="addField('long_text')">詳答</button>
 <button onclick="addField('radio')">選擇題</button>
+<button onclick="addField('checkbox')">核取方塊</button>
+<button onclick="addField('dropdown')">下拉式</button>
 <button onclick="addField('date')">日期</button>
+<button onclick="addField('time')">時間</button>
+<button onclick="addField('datetime')">日期＋時間</button>
 <button onclick="addField('shift')">班別</button>
-<hr>
-<button onclick="exportExcel()">匯出 Excel</button>
 </aside>
-<main id="canvas"></main>
-<section id="props"></section>
+<main id='canvas'></main>
+<section class='right' id='props'></section>
 </div>
-
-<script src="app.js"></script>
-<script src="exporter.js"></script>
-</body>
-</html>
+<script src='app.js'></script>
+<script src='exporter.js'></script>
+</body></html>

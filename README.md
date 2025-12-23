@@ -1,8 +1,3 @@
-# 表單規格產生器 Milestone 3（最終完整版）
+# 表單規格（Excel）產生器 – 完整版
 
-在 Milestone 2 基礎上新增：
-- 班別智慧化規則（多規則、不重疊檢查）
-- JSON 設計儲存 / 載入
-- 完整規格 Excel 匯出（可交 GPT）
-
-此版本即為最終完整版。
+此工具專門產生 Excel 規格表，供 GPT 產生 questions.html。
