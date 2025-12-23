@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>表單規格產生器</title>
+<title>表單規格產生器（修正版）</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
@@ -10,19 +10,15 @@
 
 <header class="topbar">
   <h1>📄 表單規格產生器</h1>
-  <input id="formName" placeholder="請輸入表單名稱">
 </header>
 
 <div class="container">
   <aside class="toolbox">
-    <h3>欄位類型</h3>
+    <h3>新增題目</h3>
     <button onclick="addQuestion('short_text')">簡答</button>
     <button onclick="addQuestion('long_text')">詳答</button>
     <button onclick="addQuestion('radio')">選擇題</button>
-    <button onclick="addQuestion('dropdown')">下拉式選單</button>
     <button onclick="addQuestion('date')">日期</button>
-    <button onclick="addQuestion('time')">時間</button>
-    <button onclick="addQuestion('datetime')">日期＋時間</button>
     <button onclick="addQuestion('shift')">班別</button>
     <hr>
     <button class="export" onclick="exportExcel()">📤 匯出 Excel</button>
